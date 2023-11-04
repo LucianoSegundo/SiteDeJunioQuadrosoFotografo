@@ -42,6 +42,7 @@ botaoEdi.addEventListener("click", function abrirEdi(event){
     Sobre.style.display = "none";
 
      // adição de conteudo
+
 });
 botaoNos.addEventListener("click", function abrirnos(event){
 
@@ -51,4 +52,5 @@ botaoNos.addEventListener("click", function abrirnos(event){
     Sobre.style.display = "flex";
 
      // adição de conteudo
+     
 } );
