@@ -79,3 +79,28 @@ botaoNos.addEventListener("click", function abrirnos(event){
      // adição de conteudo
 
 } );
+
+// infelismente tendo que duplicar codigo para fazer com que a função seja executada ao abrir a pagina
+window.onload = function abrir(event){
+
+    // mostrando tela
+    poritfolio.style.display = "flex";
+    edicoes.style.display = "none";
+    Sobre.style.display = "none";
+
+    // adição de conteudo
+    poritfolio.innerHTML = '<h1 class = "titulo"> Arcesvo de Capturas do Grande Mestre Quadros</h1>';
+    for(i=0; i< banco.length; i++){
+        console.log(banco.length);
+
+    divManipulavel = '<div><figure>';
+    divManipulavel += '<img src="' + banco[i].images[0] +'" alt=" ' +banco[i].title+'">';
+    divManipulavel +=   '<h2>'+ banco[i].title+'</h2> </figure>';
+    divManipulavel += '<p>'+ banco[i].description+'</p></div>';
+
+    poritfolio.innerHTML += divManipulavel;
+    divManipulavel =null;
+    };
+
+
+}
