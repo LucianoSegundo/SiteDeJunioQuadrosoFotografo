@@ -19,7 +19,7 @@ botaoPor.addEventListener("click", function abrirport(event){
     Sobre.style.display = "none";
 
     // adição de conteudo
-    poritfolio.innerHTML = "<h1> Arcesvo de Capturas do Grande Mestre Quadros</h1>";
+    poritfolio.innerHTML = '<h1 class = "titulo"> Arcesvo de Capturas do Grande Mestre Quadros</h1>';
     for(i=0; i< banco.length; i++){
         console.log(banco.length);
 
@@ -42,6 +42,31 @@ botaoEdi.addEventListener("click", function abrirEdi(event){
     Sobre.style.display = "none";
 
      // adição de conteudo
+     edicoes.innerHTML = '<h1 class = "titulo"> Explencdidad Edições do Mestre Quadros</h1>';
+     for(i =0; i< banco.length; i++){
+
+        divManipulavel = '<div class="antesDepois">';
+        divManipulavel += '<div>';
+        divManipulavel += '    <figure>';
+        divManipulavel += '        <img src="'+ banco[i].images[0]+'" alt="'+banco[i].title+'">';
+        divManipulavel += '        <h2>'+banco[i].title+'</h2>';
+        divManipulavel += '    </figure>';
+        divManipulavel += '    <p>'+banco[i].description+'</p>';
+        divManipulavel += '</div>';
+        divManipulavel += '<p id="seta">-></p>';
+        divManipulavel += '<div>';
+        divManipulavel += '    <figure>';
+        divManipulavel += '        <img src="'+banco[i].images[1]+'" alt="'+banco[i].title+'">';
+        divManipulavel += '        <h2><'+banco[i].title+'/h2>';
+        divManipulavel += '    </figure>';
+        divManipulavel += '    <p>'+banco[i].description+'</p>';
+        divManipulavel += '</div>';
+        divManipulavel += '</div>';
+
+        edicoes.innerHTML += divManipulavel
+
+
+     }
 
 });
 botaoNos.addEventListener("click", function abrirnos(event){
@@ -52,5 +77,5 @@ botaoNos.addEventListener("click", function abrirnos(event){
     Sobre.style.display = "flex";
 
      // adição de conteudo
-     
+
 } );
